@@ -3,7 +3,7 @@
 </template>
 
 <script>
-const POSTER_PATH = 'http://image.tmdb.org/t/p/w154'
+const POSTER_PATH = 'https://image.tmdb.org/t/p/w154'
 export default {
   name: 'Movie.vue',
   props: ['movie'],

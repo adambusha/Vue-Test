@@ -9,7 +9,7 @@
 </template>
 
 <script>
-const BACKDROP_PATH = 'http://image.tmdb.org/t/p/w1280'
+const BACKDROP_PATH = 'https://image.tmdb.org/t/p/w1280'
 export default {
   name: "MovieDetail.vue",
   data () {
