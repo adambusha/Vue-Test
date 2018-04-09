@@ -12,7 +12,8 @@ export default {
   },
   data() {
     return {
-      name: 'Movie DB'
+      name: 'Movie DB',
+      show: false
     }
   }
 }

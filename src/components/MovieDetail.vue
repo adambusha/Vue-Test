@@ -1,4 +1,5 @@
 <template>
+<transition name="fade">
   <div class="movie-wrapper" :style="styles">
     <div class="movie-info">
       <h1>{{ movie.title }}</h1>
@@ -6,6 +7,7 @@
       <p>{{ movie.overview }}</p>
     </div>
   </div>
+</transition>
 </template>
 
 <script>
@@ -23,7 +25,7 @@ export default {
   computed: {
     styles() {
       return {
-        background: `url(${BACKDROP_PATH}/${this.movie.backdrop_path}) no-repeat`
+        'background-image': `url(${BACKDROP_PATH}/${this.movie.backdrop_path})`
       }
     }
   },
@@ -45,6 +47,7 @@ export default {
 
 <style scoped>
 .movie-wrapper {
+  background-repeat: no-repeat;
   background-size: cover;
   padding-top: 50vh;
   position: relative;
@@ -53,5 +56,12 @@ export default {
   background: white;
   color: #222;
   padding: 2rem 10%;
+}
+.fade-enter-active, .fade-leave-active {
+    transition: all 0.3s ease;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+    transform: translateX(100%);
 }
 </style>
