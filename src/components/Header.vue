@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>{{ newTitle }}</h1>
+    <h1><router-link to="/">{{ title }}</router-link></h1>
   </header>
 </template>
 
@@ -13,17 +13,9 @@ export default {
   data() {
     return {
       name: 'Movie DB'
-    };
-  },
-  computed: {
-    newTitle: function() {
-      if (this.title === 'hello') {
-        return this.title;
-      }
-      return this.name;
     }
   }
-};
+}
 </script>
 
 <style scoped>
