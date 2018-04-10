@@ -22,10 +22,15 @@ export default {
 <style scoped>
 header {
   background-color: #111;
+  height: 5vh;
   padding: 20px;
   color: white;
 }
 h1 {
   margin: 0;
+}
+a {
+  color: #fff;
+  text-decoration: none;
 }
 </style>

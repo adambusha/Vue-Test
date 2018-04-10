@@ -1,9 +1,11 @@
 <template>
+  <transition name="slide">
   <ul>
     <li v-for="movie in movies">
       <Movie :movie="movie" />
     </li>
   </ul>
+  </transition>
 </template>
 
 <script>
@@ -22,7 +24,7 @@ export default {
     fetchData: async function () {
       try {
         const res = await fetch(
-          'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=65e043c24785898be00b4abc12fcdaae'
+          'https://api.themoviedb.org/3/movie/now_playing?api_key=65e043c24785898be00b4abc12fcdaae'
         )
         const movies = await res.json()
         this.movies = movies.results
